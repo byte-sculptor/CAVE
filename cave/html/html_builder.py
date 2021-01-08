@@ -259,7 +259,7 @@ for (i = 0; i < acc.length; i++) {
                 div += "<div style=\"overflow-x: auto\" align=\"center\">\n{}\n</div>\n".format(v)
             elif k == "html":
                 div += ("<div align=\"center\">\n<a href='{}'>Interactive "
-                        "Plot</a>\n</div>\n".format(v[len(self.output_dn):].lstrip("/")))
+                        "Plot</a>\n</div>\n".format(v[len(self.output_dn):].lstrip("\\\\")))
             elif k == "bokeh":
                 # Escape path for URL (remove spaces and single quotes)
                 path_script = os.path.join(self.relative_content_js, '_'.join([layer_name, self.budget,
