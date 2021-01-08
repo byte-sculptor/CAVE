@@ -182,7 +182,7 @@ class CostOverTime(BaseAnalyzer):
         means = np.array(means)
         times = np.array(times)
         at = [0 for _ in runs]      # keep track at which timestep each trajectory is
-        m = [np.nan for _ in runs]  # used to compute the mean over the timesteps
+        m = means[0]  # used to compute the mean over the timesteps
         mean  = np.ones((len(all_times), 1)) * -1
         var, upper, lower = np.copy(mean), np.copy(mean), np.copy(mean)
         for time_idx, t in enumerate(all_times):

@@ -289,7 +289,7 @@ class CSV2RH(object):
                 if not row_features in inst_feats_to_id:
                     new_id = len(inst_feats_to_id)
                     inst_feats_to_id[row_features] = new_id
-                    id_to_inst_feats[new_id] = features
+                    id_to_inst_feats[new_id] = row_features
                 row['instance_id'] = inst_feats_to_id[row_features]
                 self.old = row_features
                 return row
